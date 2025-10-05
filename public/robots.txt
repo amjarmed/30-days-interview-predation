@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://30-days-interview-predation.vercel.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block common unwanted paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: *.json$
