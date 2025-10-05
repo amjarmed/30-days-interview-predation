@@ -1,0 +1,17 @@
+# my social media and portfolio links
+
+- [GitHub](https://github.com/amjarmed)
+- [LinkedIn](https://www.linkedin.com/in/amjarmed)
+- [Portfolio](https://amjarmed.com)
+- [Twitter](https://twitter.com/amjarmed)
+- [Instagram](https://www.instagram.com/amjarmed)
+- [Facebook](https://www.facebook.com/amjarmed)
+- [YouTube](https://www.youtube.com/@amjarmed)
+- [LeetCode](https://leetcode.com/amjarmed)
+- [HackerRank](https://www.hackerrank.com/amjarmed)
+- [CodeWars](https://www.codewars.com/users/amjarmed)
+- [Dev.to](https://dev.to/amjarmed)
+- [Hashnode](https://amjarmed.hashnode.dev)
+- [Medium](https://medium.com/@amjarmed)
+- [Stack Overflow](https://stackoverflow.com/users/12345678/amjarmed) (replace with your actual user ID)
+- [Reddit](https://www.reddit.com/user/amjarmed)
