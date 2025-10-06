@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 interface SidebarProps {
   onDaySelect: Dispatch<SetStateAction<string | null>>;
@@ -56,33 +56,35 @@ const DaysNavigation = [
   { day: 30, title: "Day 30: Final Checklist & Calm", href: "/day-30" },
 ];
 
-export function Sidebar() {
+
+export function Sidebar({ onDaySelect, selectedDay }: SidebarProps) {
   return (
     <aside className="hidden md:block w-1/3 max-h-screen bg-slate-300  overflow-scroll dark:bg-slate-900 border-r border-slate-50 dark:border-slate-800 p-4 ">
       <nav className="space-y-2">
         <h3 className="font-bold text-lg text-slate-900 dark:text-slate-100 mb-4 py-2 border-b border-slate-200 dark:border-slate-800">
           Days Navigation links
         </h3>
-        {
-          weeks.map((week, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-md text-slate-800 dark:text-slate-200 mt-4 mb-2">{week.title}</h3>
-              <nav className="space-y-1">
-                {week.days.map((day) => {
-                  const item = DaysNavigation.find((item) => item.day === day);
-                  return item ? (
-                    <Link
-                      key={item.day}
-                      href={item.href}
-                      className="block p-2 text-sm text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
-                    >
-                      {item.title}
-                    </Link>
-                  ) : null;
-                })}
-              </nav>
-            </div>
-          ))}
+        {weeks.map((week, index) => (
+          <div key={index}>
+            <h3 className="font-semibold text-md text-slate-800 dark:text-slate-200 mt-4 mb-2">{week.title}</h3>
+            <nav className="space-y-1">
+              {week.days.map((day) => {
+                const item = DaysNavigation.find((item) => item.day === day);
+                return item ? (
+                  <button
+                    key={item.day}
+                    type="button"
+                    onClick={() => onDaySelect(`day-${item.day}`)}
+                    className={`block w-full text-left p-2 text-sm rounded transition-colors
+                      ${selectedDay === `day-${item.day}` ? "bg-slate-200 dark:bg-slate-700 font-bold" : "text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"}`}
+                  >
+                    {item.title}
+                  </button>
+                ) : null;
+              })}
+            </nav>
+          </div>
+        ))}
       </nav>
     </aside>
   );
