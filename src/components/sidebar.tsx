@@ -1,4 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { useState, Dispatch, SetStateAction } from "react";
+
+interface SidebarProps {
+  onDaySelect: Dispatch<SetStateAction<string | null>>;
+  selectedDay: string | null;
+}
 
 const weeks = [
   { title: "Week 1 — Foundation & Resume/GitHub Polish", days: [1, 2, 3, 4, 5, 6] },

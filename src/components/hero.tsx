@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -36,7 +37,15 @@ export default function Hero() {
               <p className="text-lg text-slate-700 dark:text-slate-200 font-medium">
                 Stay tuned for daily coding challenges, solutions, and insights!
               </p>
+
             </section>
+             <Link
+                href="/platform"
+                className="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-colors duration-300"
+              >
+                Follow My Journey
+              </Link>
+
 
             {/* Decorative elements */}
             <div className="flex justify-center space-x-4 pt-8" aria-hidden="true">
